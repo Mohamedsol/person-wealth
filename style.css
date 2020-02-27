@@ -38,6 +38,11 @@ button {
     font-weight: bold;
     font-size: 14px;
     outline: none;
+    animation-name: btnFade;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    
 }
 
 main {
@@ -70,5 +75,31 @@ h3 {
     justify-content: space-between;
     font-size: 20px;
     margin-bottom: 10px;
+    margin-top: 20px;
   }
 
+  h1{
+    color: orange;
+    animation-name: toLeft ;
+    animation-duration: 3s;
+  }
+
+  @keyframes toLeft {
+    0% {
+      transform: translateX(120px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes btnFade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
